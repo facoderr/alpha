@@ -541,6 +541,7 @@ h2 + p + span {
 }
 
 .fadeUp {
+  -webkit-animation: fadeUp 1s forwards;
           animation: fadeUp 1s forwards;
 }
 
