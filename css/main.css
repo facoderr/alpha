@@ -5075,6 +5075,18 @@ h2 + p + span {
     font-size: 100px;
   }
   h1 + p {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-flex-flow: wrap;
+        -ms-flex-flow: wrap;
+            flex-flow: wrap;
+    width: 100%;
     font-size: 36px;
     margin: 70px 0 0;
   }
@@ -5089,6 +5101,18 @@ h2 + p + span {
     margin: 0 0 -10px;
   }
   h2 + p {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-flex-flow: wrap;
+        -ms-flex-flow: wrap;
+            flex-flow: wrap;
+    width: 100%;
     font-size: 25px;
   }
   h2 + p:before, h2 + p:after {

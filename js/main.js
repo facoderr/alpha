@@ -220,7 +220,16 @@ $(document).ready(function() {
 			$this.html($this.text().replace(/./g, '<span class="js-letter fadeLeft paused">$&</span>'));
 		});
 	};
-	addLetter();
+	$(window).on('load', function() {
+		if ($(window).width() >= 992) {
+			addLetter();
+		}
+	});
+	$(window).on('resize', function() {
+		if ($(window).width() >= 992) {
+			addLetter();
+		}
+	});
 	setInterval(function() {
 		var i = 0;
 		inWindow('.js-letter').each(function() {
