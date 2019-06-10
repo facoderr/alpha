@@ -132,6 +132,7 @@ $(document).ready(function() {
 	$(document).on('click', '.js-close', function() {
 		$('.popup-info-form').removeClass('open');
 		$('.popup').removeClass('open');
+		$('.modal').removeClass('open');
 	});
 	$(document).on('click', '.js-popup-form', function() {
 		$('.popup-info-form').addClass('open');
@@ -144,9 +145,10 @@ $(document).ready(function() {
 		$('.gallery-sliderFor')[0].slick.refresh();
 	});
 	$(document).bind('mouseup touchend', function(e) {
-		if ($(e.target).closest('.select').length ||$(e.target).closest('.gallery-sliderFor').length) return;
+		if ($(e.target).closest('.select').length || $(e.target).closest('.gallery-sliderFor').length || $(e.target).closest('.modal-success').length) return;
 		$('.select').removeClass('open');
 		$('.gallery-sliderFor').removeClass('open');
+		$('.modal').removeClass('open');
 	});
 
 	//
@@ -261,6 +263,27 @@ $(document).ready(function() {
 				$(this).removeClass('paused');
 			}
 		});
+	});
+	$(document).on('click', '.js-anchor', function() {
+		var id = $(this).attr('href');
+				scroll = $(id).offset().top;
+		if ($(window).width() >= 992) {
+			$('html, body').animate({
+				scrollTop: scroll - 25
+			}, 1500);
+			return false;
+		} else if ($(window).width() >= 576) {
+			$('html, body').animate({
+				scrollTop: scroll + 50
+			}, 1500);
+			return false;
+		} else {
+			$('html, body').animate({
+				scrollTop: scroll + 30
+			}, 1500);
+			return false;
+		}
+		return false;
 	});
 
 	//
