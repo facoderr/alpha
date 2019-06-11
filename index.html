@@ -955,6 +955,9 @@
 									<option value="3 дня">
 										3 дня
 									</option>
+									<option value="Больше 3-х дней">
+										Больше 3-х дней
+									</option>
 								</select>
 							</div>
 							<button type="submit" class="btn">
@@ -1082,6 +1085,9 @@
 									</option>
 									<option value="3 дня">
 										3 дня
+									</option>
+									<option value="Больше 3-х дней">
+										Больше 3-х дней
 									</option>
 								</select>
 							</div>
@@ -1211,6 +1217,9 @@
 									<option value="3 дня">
 										3 дня
 									</option>
+									<option value="Больше 3-х дней">
+										Больше 3-х дней
+									</option>
 								</select>
 							</div>
 							<button type="submit" class="btn">
@@ -1338,6 +1347,9 @@
 									</option>
 									<option value="3 дня">
 										3 дня
+									</option>
+									<option value="Больше 3-х дней">
+										Больше 3-х дней
 									</option>
 								</select>
 							</div>
@@ -1467,6 +1479,9 @@
 									<option value="3 дня">
 										3 дня
 									</option>
+									<option value="Больше 3-х дней">
+										Больше 3-х дней
+									</option>
 								</select>
 							</div>
 							<button type="submit" class="btn">
@@ -1594,6 +1609,9 @@
 									</option>
 									<option value="3 дня">
 										3 дня
+									</option>
+									<option value="Больше 3-х дней">
+										Больше 3-х дней
 									</option>
 								</select>
 							</div>
@@ -1723,6 +1741,9 @@
 									<option value="3 дня">
 										3 дня
 									</option>
+									<option value="Больше 3-х дней">
+										Больше 3-х дней
+									</option>
 								</select>
 							</div>
 							<button type="submit" class="btn">
@@ -1850,6 +1871,9 @@
 									</option>
 									<option value="3 дня">
 										3 дня
+									</option>
+									<option value="Больше 3-х дней">
+										Больше 3-х дней
 									</option>
 								</select>
 							</div>
@@ -1981,10 +2005,12 @@
 		$('.js-form-mail').submit(function() {
 			$.ajax({
 				type: 'POST',
-				url: 'mail/mail.php',
+				url: 'mail/main.php',
 				data: $(this).serialize()
 			}).done(function() {
 				$('.js-form input').val('');
+				$('.popup-info-form').removeClass('open');
+				$('.popup').removeClass('open');
 				$('.modal').addClass('open');
 				setTimeout(function() {
 					$('.modal').removeClass('open');
@@ -1999,6 +2025,8 @@
 				data: $(this).serialize()
 			}).done(function() {
 				$('.js-form input').val('');
+				$('.popup-info-form').removeClass('open');
+				$('.popup').removeClass('open');
 				$('.modal').addClass('open');
 				setTimeout(function() {
 					$('.modal').removeClass('open');
@@ -2013,6 +2041,8 @@
 				data: $(this).serialize()
 			}).done(function() {
 				$('.js-form input').val('');
+				$('.popup-info-form').removeClass('open');
+				$('.popup').removeClass('open');
 				$('.modal').addClass('open');
 				setTimeout(function() {
 					$('.modal').removeClass('open');
@@ -2027,6 +2057,8 @@
 				data: $(this).serialize()
 			}).done(function() {
 				$('.js-form input').val('');
+				$('.popup-info-form').removeClass('open');
+				$('.popup').removeClass('open');
 				$('.modal').addClass('open');
 				setTimeout(function() {
 					$('.modal').removeClass('open');

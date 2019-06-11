@@ -3291,7 +3291,7 @@ h2 + p + span {
   visibility: hidden;
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
-  z-index: 101;
+  z-index: 111;
 }
 
 .modal.open {
