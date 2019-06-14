@@ -2927,12 +2927,13 @@ h2 + p + span {
       -ms-flex-align: center;
           align-items: center;
   height: 100vh;
-  padding: 140px 0;
+  padding: 140px 0 70px;
 }
 
 .popup-gallery {
   position: relative;
   width: 630px;
+  height: 100%;
   margin: 0 70px;
 }
 
@@ -4092,6 +4093,7 @@ h2 + p + span {
   }
   .popup-gallery {
     width: 450px;
+    height: auto;
     margin: 0 50px 0 0;
   }
   .popup-discount {
