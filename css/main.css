@@ -3113,6 +3113,11 @@ h2 + p + span {
   font-weight: 700;
 }
 
+.popup-info-group .btn:before {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
 .popup-info-btn {
   color: #191919;
   background: #fff;
