@@ -195,14 +195,8 @@ $(document).ready(function() {
 		var mainHeight = $('.main').outerHeight();
 		if ($(document).scrollTop() > (mainHeight / 2)) {
 			$('.nav').addClass('fixed');
-			$('.nav').css('visibility', 'visible');
 		} else if ($(document).scrollTop() < (mainHeight / 2)) {
-			if ($('.nav').hasClass('fixed')) {
-				$('.nav').removeClass('fixed');
-				setTimeout(function() {
-					$('.nav').css('visibility', 'hidden');
-				}, 1000);
-			}
+			$('.nav').removeClass('fixed');
 		}
 	};
 	function inWindow(s){
@@ -297,6 +291,8 @@ $(document).ready(function() {
 	// Load Event
 
 	$(window).on('load', function() {
+		$('.pulse').fadeOut();
+		$('.preloader').delay(400).fadeOut('slow');
 		$('.head-phone').clone().appendTo('.head-mobile');
 		$('.head-link').clone().appendTo('.head-mobile');
 		$('.head-socials').clone().appendTo('.head-mobile');
