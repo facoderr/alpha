@@ -86,6 +86,7 @@ input::placeholder, textarea::placeholder {
 /* -- Fonts -- */
 @font-face {
   font-family: "Corinthia";
+  font-display: auto;
   font-weight: normal;
   font-style: normal;
   text-rendering: optimizeLegibility;
@@ -95,6 +96,7 @@ input::placeholder, textarea::placeholder {
 
 @font-face {
   font-family: "Bebas Neue";
+  font-display: auto;
   font-weight: 400;
   font-style: normal;
   text-rendering: optimizeLegibility;
@@ -104,6 +106,7 @@ input::placeholder, textarea::placeholder {
 
 @font-face {
   font-family: "Bebas Neue";
+  font-display: auto;
   font-weight: 700;
   font-style: normal;
   text-rendering: optimizeLegibility;
