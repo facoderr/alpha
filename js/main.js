@@ -155,16 +155,26 @@ $(document).ready(function() {
 
 	// IE 'object-fit: cover' fix
 
+	$.fn.hasAttr = function(name) {  
+		return this.attr(name) !== undefined;
+	};
 	function ObjectFitIt() {
 		$('.js-obj').each(function() {
 			var imgSrc = $(this).attr('src');
+					imgLazy = $(this).data('lazy');
 			var fitType = 'cover';
 			if ($(this).data('fit-type')) {
 				fitType = $(this).data('fit-type');
 			}
-			$(this).parent().css({ 
-				'background' : 'transparent url("' + imgSrc + '") no-repeat center center/' + fitType
-			});
+			if ($(this).hasAttr('data-lazy')) {
+				$(this).parent().css({ 
+					'background' : 'transparent url("' + imgLazy + '") no-repeat center center/' + fitType
+				});
+			} else {
+				$(this).parent().css({ 
+					'background' : 'transparent url("' + imgSrc + '") no-repeat center center/' + fitType
+				});
+			}
 			$('.js-obj').css('display','none'); 
 		});
 	}

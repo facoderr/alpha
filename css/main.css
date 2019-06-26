@@ -2,9 +2,9 @@
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  -moz-osx-font-smoothing-text-rendering: optimizeSpeed;
+  text-rendering: optimizeLegibility;
 }
 
 *:before, *:after {
@@ -753,6 +753,11 @@ h2 + p + span {
   visibility: hidden;
 }
 
+img[data-lazy], img[data-src], img[data-srcset] {
+  display: block;
+  min-height: 1px;
+}
+
 /* -- End General -- */
 /* -- Nav -- */
 .nav {
@@ -762,8 +767,6 @@ h2 + p + span {
   right: 0;
   left: 0;
   background: #fff;
-  -webkit-transform: translate3d(0, -100%, 0);
-          transform: translate3d(0, -100%, 0);
   -webkit-animation: slideUp 1s both;
           animation: slideUp 1s both;
   padding: 20px 0;
@@ -3632,6 +3635,42 @@ h2 + p + span {
 }
 
 /* -- End Footer -- */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .nav {
+    top: -100%;
+  }
+  .nav.fixed {
+    top: 0;
+  }
+  .main:before, .popup-call:before, .popup-order:before {
+    background: rgba(32, 26, 26, 0.5);
+  }
+  .why:after, .category:after, .category-box:after, .features:after, .callback:after {
+    background: rgba(32, 26, 26, 0.5);
+  }
+  .steps:before, .steps:after, .reviews + .callback:before, .reviews + .callback:after {
+    background: rgba(32, 26, 26, 0.5);
+  }
+}
+
+@supports (-ms-ime-align: auto) {
+  .nav {
+    top: -100%;
+  }
+  .nav.fixed {
+    top: 0;
+  }
+  .main:before, .popup-call:before, .popup-order:before {
+    background: rgba(32, 26, 26, 0.5);
+  }
+  .why:after, .category:after, .category-box:after, .features:after, .callback:after {
+    background: rgba(32, 26, 26, 0.5);
+  }
+  .steps:before, .steps:after, .reviews + .callback:before, .reviews + .callback:after {
+    background: rgba(32, 26, 26, 0.5);
+  }
+}
+
 /* -- Responsive -- */
 @media only screen and (min-width: 576px) {
   .container {
